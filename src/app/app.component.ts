@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CoreService } from './service/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'NukBook';
+  title = 'NookBook';
+
+  constructor( translate : TranslateService) { 
+    translate.setDefaultLang('th')
+  }
 }
